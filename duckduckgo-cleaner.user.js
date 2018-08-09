@@ -12,7 +12,7 @@
 
 function getDomains() {
     let data = GM_getValue('blocked_domains', '[]');
-    console.log('returning', data);
+    //console.log('returning', data);
     return JSON.parse(data);
 }
 
@@ -20,7 +20,7 @@ function blockDomain(domain) {
     let domains = getDomains();
     domains.push(domain);
     let data = JSON.stringify(domains);
-    console.log('storing', data);
+    //console.log('storing', data);
     GM_setValue('blocked_domains', data);
 }
 
